@@ -2,42 +2,39 @@ const noteRouter = require('express').Router();
 const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
 const uuid = require('../helpers/uuid');
 
-//This should just get all the pre-existing data to upload
+//This should just get all the pre-existing data to upload in sidebar
 noteRouter.get('/', (req, res) => {
     console.info(`${req.method} request received for notes`);
   
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
+    //readAndAppend('./db/db.json').then((data) => res.json(JSON.parse(data)))
+
   });
 
   noteRouter.post('/', (req, res) => {
-    console.info(`${req.method} request received to submit a note`);
+    console.info(`${req.method} request received to submit note`);
 
     const { title, text} = req.body;
 
     if (title && text){
-    const newNote = {
+
+    const activeNote = {
       title,
       text,
-      note_id: uuid(),
+      id: uuid(),
     }
 
-    readAndAppend(newNote, './db/db.json');
+    readAndAppend(activeNote, './db/db.json');
 
-    const response = {
-      status: 'success',
-      body: newNote,
-    }
-
-      res.json(response);
+      res.json(activeNote);
     } else {
       res.json('Error: cannot post new note')
     }
-    
-    // THIS IS A READ AND APPEND SITUATION
+
   });
 
   noteRouter.delete('/', (req, res) => {
-    console.info(`${req.method} request received to delete note`);
+  //  console.info(`${req.method} request received to delete note`);
   
   });
 
