@@ -1,6 +1,6 @@
 const apiRouter = require('express').Router();
 
-const addNotes = require('./addNote');
+const addNotes = require('./notes');
 
 apiRouter.use('/addNote', addNotes);
 
