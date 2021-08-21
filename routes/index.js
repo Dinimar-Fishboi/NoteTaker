@@ -1,7 +1,13 @@
-const apiRouter = require('express').Router();
 
-const addNotes = require('./notes');
+const express = require('express');
 
-apiRouter.use('/addNote', addNotes);
+//Import modular routers
 
-module.exports = apiRouter;
+const notes = require('./notes');
+
+const app = express();
+
+app.use('/notes', notes);
+
+
+module.exports = app;

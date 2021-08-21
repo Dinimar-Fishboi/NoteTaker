@@ -1,11 +1,12 @@
 const noteRouter = require('express').Router();
 const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
-const uuid = require('../helpers/uuid');
+//const { v4: uuidv4 } = require('uuid');
 
+//This should just get all the pre-existing data to upload
 noteRouter.get('/', (req, res) => {
     console.info(`${req.method} request received for notes`);
   
-    readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
+    readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
   });
 
   noteRouter.post('/', (req, res) => {
