@@ -27,6 +27,10 @@ noteRouter.get('/', (req, res) => {
 
     readAndAppend(activeNote, './db/db.json');
 
+    //This will push the new info to the now present db variable.
+    // This is due to the db not updating after initial upload.
+    db.push(activeNote);
+
       res.json(activeNote);
     } else {
       res.json('Error: cannot post new note')
@@ -57,9 +61,10 @@ noteRouter.get('/', (req, res) => {
 
     //readAndAppend(db, './db/db.json');
 
-   // writeToFile("./db/db.json", db);
+    writeToFile("./db/db.json", db);
 
-   // readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
+   readFromFile('./db/db.json').then((data) => res.json(data));
+   //res.json(JSON.parse(data)))
 
   });
 
