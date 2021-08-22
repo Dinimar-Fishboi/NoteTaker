@@ -7,10 +7,9 @@ noteRouter.get('/', (req, res) => {
     console.info(`${req.method} request received for notes`);
   
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
-    //readAndAppend('./db/db.json').then((data) => res.json(JSON.parse(data)))
-
   });
 
+  // Allows for new notes to be added
   noteRouter.post('/', (req, res) => {
     console.info(`${req.method} request received to submit note`);
 
@@ -33,9 +32,18 @@ noteRouter.get('/', (req, res) => {
 
   });
 
-  noteRouter.delete('/', (req, res) => {
-  //  console.info(`${req.method} request received to delete note`);
-  
+  // Deletes selected note on front end and in db
+  noteRouter.delete('/:id', (req, res) => {
+    console.info(`${req.method} request received to delete note`);
+    console.log(`${req.method} request received to delete note`);
+
+    const {id} = req.body;
+
+  //  console.info(req);
+   // const noteID = request.params.id;
+       console.info(id);
+
+
   });
 
   module.exports = noteRouter;
