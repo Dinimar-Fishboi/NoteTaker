@@ -4,33 +4,13 @@
         "text": "Test text"
     },
     {
-        "title": "DB is still associated",
-        "text": "with whatever was in the JSON file when the app originally launched",
-        "id": "e218"
+        "title": "Front-End notes",
+        "text": "I'm not sure why the text lowers like it does, however I solely worked on the back end so ¯\\_(ツ)_/¯ ",
+        "id": "269e"
     },
     {
-        "title": "So.......... we need to",
-        "text": "resolve the new readFromFile function",
-        "id": "c54b"
-    },
-    {
-        "title": "#4",
-        "text": "dghdfghdrghd",
-        "id": "3b40"
-    },
-    {
-        "title": "#sidfghidfg",
-        "text": "ggddddfgf",
-        "id": "9067"
-    },
-    {
-        "title": "sfdhadgsbdfbsgc art",
-        "text": "dfgdfhsvdfgbnergxb",
-        "id": "4cc3"
-    },
-    {
-        "title": "New Boi",
-        "text": "slkfgldskgsd",
-        "id": "0f12"
+        "title": "Test Title Note",
+        "text": "The test title note cannot be deleted: have not attempted to fix.\n\nWill not attempt to fix.",
+        "id": "7737"
     }
 ]

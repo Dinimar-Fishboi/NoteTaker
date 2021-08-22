@@ -25,6 +25,7 @@ noteRouter.get('/', (req, res) => {
       id: uuid(),
     }
 
+    // Adds note to actual db.json file
     readAndAppend(activeNote, './db/db.json');
 
     //This will push the new info to the now present db variable.
@@ -43,9 +44,6 @@ noteRouter.get('/', (req, res) => {
     console.info(`${req.method} request received to delete note`);
 
     const id = req.params.id;
-    console.info(id);
-    console.info(db);
-    console.info(db[1].id);
     
     for ( i = 0; i < db.length; i++){
      
@@ -53,18 +51,16 @@ noteRouter.get('/', (req, res) => {
       if (db[i].id === id){
         db.splice(i, 1);
         console.info("The selected note was deleted");
-        console.info(db);
       } else {
         console.info(`We did not delete ${id}`);
       }
     }
 
-    //readAndAppend(db, './db/db.json');
-
+    //Overwrites db.json
     writeToFile("./db/db.json", db);
 
-   readFromFile('./db/db.json').then((data) => res.json(data));
-   //res.json(JSON.parse(data)))
+    //Updates sidebar
+    readFromFile('./db/db.json').then((data) => res.json(data));
 
   });
 
