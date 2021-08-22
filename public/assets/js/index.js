@@ -84,9 +84,6 @@ const handleNoteDelete = (e) => {
 
   const note = e.target;
   const noteId = JSON.parse(note.parentElement.getAttribute('data-note')).id;
-// DELETE NEXT LINE BEFORE COMMIT
-  console.log(noteId);
-  console.log(JSON.parse(note.parentElement.getAttribute('data-note')));
 
   if (activeNote.id === noteId) {
     activeNote = {};
@@ -184,4 +181,3 @@ if (window.location.pathname === '/notes') {
 }
 
 getAndRenderNotes();
-
