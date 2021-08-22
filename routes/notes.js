@@ -42,11 +42,7 @@ noteRouter.get('/', (req, res) => {
     console.info(id);
     console.info(db);
     console.info(db[1].id);
-    console.log(id);
-    console.log(db);
-    console.log(db[1].id);
-    readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
-
+    
     for ( i = 0; i < db.length; i++){
      
       console.info(" THis is what we see in the loop " + db[i].id);
@@ -54,11 +50,8 @@ noteRouter.get('/', (req, res) => {
         db.splice(i, 1);
         console.info("The selected note was deleted");
         console.info(db);
-        console.log("The selected note was deleted");
-        console.log(db);
       } else {
         console.info(`We did not delete ${id}`);
-        console.log(`We did not delete ${id}`);
       }
     }
 
