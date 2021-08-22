@@ -9,10 +9,14 @@ This application allows you to enter and delete notes at whim; while loading any
 Front-end software was provided prior to project.
 
 ## Deployed site and Screenshots
-[LIVE Note Taker App](https://eleven-note-take.herokuapp.com)
 
+[LIVE Note Taker App](https://eleven-note-take.herokuapp.com)
+<img width="1045" alt="Screen Shot 2021-08-22 at 21 13 05" src="https://user-images.githubusercontent.com/83541287/130353033-743e0d57-1baa-419b-a387-a0d649d7f53e.png">
+
+<img width="1045" alt="Screen Shot 2021-08-22 at 21 13 58" src="https://user-images.githubusercontent.com/83541287/130353047-7ce307e7-bd2f-4197-bea7-7d12408e23cb.png">
 
 ## Table of Contents 
+
 - [Technologies](#technologies)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -21,6 +25,7 @@ Front-end software was provided prior to project.
 - [License](#license-and-copyright)
 
 ## Technologies
+
 - Node.js
 - Express.js
 - JavaScript
@@ -43,7 +48,7 @@ User can visit currently deployed site [HERE](https://eleven-note-take.herokuapp
 If you have any questions, please reach out.
 
 - [https://github.com/Dinimar-Fishboi](https://github.com/Dinimar-Fishboi)
-- [dev.fish.studio@protonmail.com ](#dev.fish.studio@protonmail.com )
+- [dev.fish.studio@protonmail.com ](#dev.fish.studio@protonmail.com)
 
 ## License and Copyright
 
